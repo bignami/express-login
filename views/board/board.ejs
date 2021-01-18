@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+    <% if(boards.length > 0) {%>
+        <table border="1">
+            <th>게시물번호</th>
+            <th>제목</th>
+            <th>분류</th>
+            <th>가격</th>
+            <% for(let i =0; i< boards.length; i++) { %>
+                <tr>
+                    <td><%= boards[i].postId %></td>
+                    <td><%= boards[i].subject %> </td>
+                    <td><%= boards[i].service %> </td>
+                    <td><%= boards[i].price.toLocaleString() + "원" %> </td>
+                </tr>
+            <% } %>
+        </table>
+        
+    <% } %>
+
+    <a href="/makeboard">글생성</a>
+</body>
+</html>

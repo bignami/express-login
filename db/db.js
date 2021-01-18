@@ -1,3 +1,4 @@
+
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 
@@ -5,9 +6,11 @@ dotenv.config();
 
 const dbConnect = () => {
     mongoose.connect(process.env.MONGO_URL, {
-        dbName: 'apiProject',
+        dbName: 'lab403_dev',
         useNewUrlParser: true,
         useCreateIndex: true,
+        useUnifiedTopology: true,
+
     }, (error) => {
         if(error) {
             console.log('몽고디비 연결 에러', error)
