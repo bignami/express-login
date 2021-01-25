@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="/board/detail/<%= docs[0]._id %>" method="POST">
+        <label for="user_service">서비스</label>
+        <input id = "user_service" name= "user_service" type="text" value= '<%= docs[0].service %>'>
+        <br/>
+        <label for="user_title">제목</label>
+        <input id = "user_title" name= "user_title" type="text" value= '<%= docs[0].subject %>'>
+        <br/>
+        <label for="user_content">내용</label>
+        <textarea id = "user_content" name= "user_content" type="text" value= '<%= docs[0].content %>'></textarea>
+        <br/>
+        <label for="user_authKey">인증키</label>
+        <input id = "user_authKey" name= "user_authKey" type="text" value= '<%= docs[0].auth_key %>'>
+        <br/>
+        <label for="user_price">가격</label>
+        <input id = "user_price" name= "user_price" type="text" value= '<%= docs[0].price %>'> 
+        <br/>
+        <button type="submit">수정하기</button>
+    </form>
+</body>
+</html>
